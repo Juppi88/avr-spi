@@ -17,9 +17,9 @@ void spi_initialize(volatile uint8_t *spi_ddr, uint8_t spi_miso, uint8_t spi_mos
 uint8_t spi_sync(uint8_t data);
 
 // Write data to target device without reading anything.
-void spi_write_data(const uint8_t *buffer, uint8_t len);
+void spi_write_data(const void *buffer, uint8_t len);
 
 // Receive data from target device without sending anything.
-void spi_read_data(uint8_t *buffer, uint8_t len);
+void spi_read_data(void *buffer, uint8_t len);
 
 #endif

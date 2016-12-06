@@ -35,9 +35,9 @@ uint8_t spi_sync(uint8_t data)
 	return SPDR;
 }
 
-void spi_write_data(const void *data, uint8_t len)
+void spi_write_data(const void *buffer, uint8_t len)
 {
-	const uint8_t *p = (const uint8_t *)data;
+	const uint8_t *p = (const uint8_t *)buffer;
 
 	while (len-- > 0) {
 		spi_sync(*p++);
